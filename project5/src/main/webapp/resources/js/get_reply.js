@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	console.log("get_Reply Module......");
 	
-//	var bnoValue='<c:cout value="${board.bno}"/>';
-	var bnoValue='100';
+	var bnoValue='<c:out value="${board.bno}"/>';
+//	var bnoValue='100';
 	var replyUL=$(".chat");
 	
 	showList(1);

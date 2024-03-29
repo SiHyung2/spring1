@@ -8,13 +8,12 @@
 
 <%@include file="../include/header.jsp"%>
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-3.3.1.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body class="bg-gradient-primary">
 
 	<script type="text/javascript">
-	
 // 		$(function() {
 
 // 			const fromObj = $("form");
@@ -109,9 +108,10 @@
 					<!-- 					<button type="submit" data-oper='list' class="btn btn-info">List</button> -->
 
 					<button type="submit" form="operForm" data-oper='modify' class ="btn btn-default">Modify</button>
-					<button type="submit" form="operForm" data-oper='remove' class ="btn btn-default">Remove</button>
-					<button type="submit" form="operForm" data-oper='list' class ="btn btn-default">List</button>
-
+<!-- 					<button type="submit" form="operForm" data-oper='remove' class ="btn btn-default">Remove</button> -->
+					<button type="submit" form="operForm" data-oper='list' class ="btn btn-info">List</button>
+					<p></p>
+					
 					<form id="operForm" method="get">
 						<input type='hidden' id='bno' name='bno' value='<c:out value="${board.bno }"/>'> 
 						<input type='hidden' name='pageNum' value='<c:out value="${cri.pageNum}"/>'> 
@@ -147,15 +147,15 @@
 				
 				<%@include file="../reply/reply_modal.jsp" %>
 				
+				<%@include file="../reply/reply_list.jsp" %>
 
-				<script type="text/javascript" src="/resources/js/reply.js"></script>
-				<script type="text/javascript" src="/resources/js/get_reply.js"></script>
+				<script type="text/javascript" src="/resources/js/reply_ajax.js"></script>
+				
+<%-- 				<%@include file="../reply/reply_ajax_test.jsp" %> --%>
+				
 			</div>
 
 		</div>
 	</div>
-
-
 </body>
-
 </html>
