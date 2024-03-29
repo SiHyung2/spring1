@@ -11,10 +11,9 @@ $(document).ready(function(){
 	showList(1);
 	
 	function showList(page){
-		console.log("get_Reply에서의 showList함수 실행22......");
+		
 		
 		replyService.getList({bno:bnoValue,page : page || 1}, function(list){
-			console.log("get_Reply에서의 showList함수 안쪽 실행......");
 			
 			var str = "";
 			if(list == null || list.length == 0){
@@ -31,55 +30,8 @@ $(document).ready(function(){
 			replyUL.html(str);
 			
 			
-			
 		}); // end function
 	} // end showList
-	
-	//생략된 부분
-	
-	var PageNum=1;
-	
-	var replyPageFooter=$(".panel-footer");
-	
-	function showReplyPage(replyCnt){ //생략
-	}
-	
-	replyPageFooter.on("click","li a",function(e){
-		//생략
-	})
-	
-	var modal=$(".modal");
-	var modalInputReply=modal.find("input[name='reply']");
-	var modalInputReplyer=modal.find("input[name='replyer']");
-	var modalInputReplyDate=modal.find("input[name='replyDate']");
-	
-	var modalModBtn=$("#modalModBtn");
-	var modalRemoveBtn = $("#modalRemoveBtn");
-	var modalRegisterBtn = $("#modalRegisterBtn");
-	
-	$("#modalCloseBtn").on("click", function(e){
-		//생략
-	});
-	
-	$("#addReplyBtn").on("click", function(e){
-		//생략
-	});
-	
-	modalRegisterBtn.on("click",function(e){
-		//생략
-	});
-	
-	$(".chat").on("click",function(e){
-		//생략
-	});
-	
-	modalModBtn.on("click",function(e){
-		//생략
-	});
-	
-	modalRemoveBtn.on("click",function(e){
-		//생략
-	});
 });
 
 

@@ -8,8 +8,9 @@
 
 <%@include file="../include/header.jsp"%>
 
+<!-- 헤더 파일에 제이쿼리와 제이쿼리의 에이젝스를 받아왔으니 두번 받으면 에러생긴다 -->
 <!-- <script src="//code.jquery.com/jquery-3.3.1.min.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
 <body class="bg-gradient-primary">
 
@@ -128,11 +129,10 @@
 							<div class="panel-heading">
 								<i class="fa fa-comment fa-fw"></i>Reply
 								
+								<!-- PPT와는 다르게 data-toggle="modal" data-target="#myModal  부분을 추가하였음 -->
 								<button id='addReplyBtn' type="button" class="btn btn-primary btn-xs pull-right" 
-								data-toggle="modal" data-target="#myModal">새 댓글</button>
+									data-toggle="modal" data-target="#myModal">New Reply</button>
 								
-								<button id='addReplyBtn'
-									class='btn btn-primary btn-xs pull-right'>New Reply</button>
 							</div>
 							<!-- 패널 머리 끝 -->
 							<div class="panel-body">
@@ -147,11 +147,11 @@
 				
 				<%@include file="../reply/reply_modal.jsp" %>
 				
-				<%@include file="../reply/reply_list.jsp" %>
+<%-- 				<%@include file="../reply/reply_list.jsp" %> --%>
 
 				<script type="text/javascript" src="/resources/js/reply_ajax.js"></script>
 				
-<%-- 				<%@include file="../reply/reply_ajax_test.jsp" %> --%>
+				<%@include file="../reply/reply_ajax_test.jsp" %>
 				
 			</div>
 

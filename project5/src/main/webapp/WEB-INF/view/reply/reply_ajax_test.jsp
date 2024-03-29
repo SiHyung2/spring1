@@ -52,22 +52,22 @@
 // 			}
 // 	)
 	//5. 댓글 1개 조회 테스트
-	replyService.get(
-			26
-			,
-			//콜백 함수를 만든다   매개변수는 적당히 count라고 짓는다
-			function(count){
-				console.log("==============",count,"==============");
-				alert("get만 성공 (count가 success가 아니여도 실행됨)");
-				if(count==="success"){
-					alert("get 성공 (count도 success!!!)");        // 어째선지 count가 success로 안 나온다...
-				}
-			}
-			,
-			function(err){
-				alert('ERROR...');
-			}
-	)
+// 	replyService.get(
+// 			26
+// 			,
+// 			//콜백 함수를 만든다   매개변수는 적당히 count라고 짓는다
+// 			function(count){
+// 				console.log("==============",count,"==============");
+// 				alert("get만 성공 (count가 success가 아니여도 실행됨)");
+// 				if(count==="success"){
+// 					alert("get 성공 (count도 success!!!)");        // 어째선지 count가 success로 안 나온다...
+// 				}
+// 			}
+// 			,
+// 			function(err){
+// 				alert('ERROR...');
+// 			}
+// 	)
 	
 </script>
 
